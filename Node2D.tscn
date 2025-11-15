@@ -1,0 +1,236 @@
+[gd_scene load_steps=10 format=3 uid="uid://c20dv5v8a4vbl"]
+
+[ext_resource type="Script" path="res://Node2d.cs" id="1_yicpo"]
+[ext_resource type="Theme" uid="uid://b83df770qem8b" path="res://button_theme.tres" id="2_pjyk1"]
+[ext_resource type="Texture2D" uid="uid://dx6c7ck2eyebu" path="res://LTdjLobXc-984177867.png" id="2_qrf0i"]
+[ext_resource type="AudioStream" uid="uid://de28pinw57b62" path="res://mixkit-sci-fi-laser-in-space-sound-2825.wav" id="4_lasko"]
+[ext_resource type="AudioStream" uid="uid://bsyahmuhkvoq6" path="res://mixkit-arcade-retro-game-over-213.wav" id="5_8dpri"]
+[ext_resource type="AudioStream" uid="uid://cblr07iwftlgx" path="res://mixkit-modern-technology-select-3124.wav" id="6_25a4r"]
+[ext_resource type="AudioStream" uid="uid://cileqg20ejq24" path="res://Star Wars - Cantina Song.mp3" id="6_k13br"]
+[ext_resource type="AudioStream" uid="uid://b7ishmwvu6o0i" path="res://mixkit-sad-game-over-trombone-471.wav" id="6_wx0q0"]
+[ext_resource type="AudioStream" uid="uid://copjgydil141w" path="res://mixkit-message-pop-alert-2354.mp3" id="7_lhafn"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_yicpo")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 629.0
+offset_top = 43.0
+offset_right = 1053.0
+offset_bottom = 585.0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Control"]
+position = Vector2(-629, -43)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="black" type="Button" parent="Control/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_pjyk1")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+toggle_mode = true
+text = "BLACK"
+icon_alignment = 1
+expand_icon = true
+
+[node name="red" type="Button" parent="Control/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_pjyk1")
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+toggle_mode = true
+text = "RED"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="black1" type="Button" parent="Control/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_pjyk1")
+toggle_mode = true
+
+[node name="black2" type="Button" parent="Control/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_pjyk1")
+toggle_mode = true
+
+[node name="red1" type="Button" parent="Control/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_pjyk1")
+toggle_mode = true
+
+[node name="red2" type="Button" parent="Control/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_pjyk1")
+toggle_mode = true
+
+[node name="spin" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_pjyk1")
+theme_override_font_sizes/font_size = 100
+text = "SPIN!"
+
+[node name="black1" type="Sprite2D" parent="."]
+position = Vector2(680.75, 358.625)
+scale = Vector2(0.118171, 0.0855705)
+texture = ExtResource("2_qrf0i")
+region_enabled = true
+region_rect = Rect2(0, 0, 842.667, 1043.51)
+
+[node name="red2" type="Sprite2D" parent="."]
+position = Vector2(1008, 358)
+scale = Vector2(0.118171, 0.0855705)
+texture = ExtResource("2_qrf0i")
+region_enabled = true
+region_rect = Rect2(-7.92651, 1040.36, 867.848, 949.778)
+
+[node name="black2" type="Sprite2D" parent="."]
+position = Vector2(788, 358)
+scale = Vector2(0.0818127, 0.0855705)
+texture = ExtResource("2_qrf0i")
+region_enabled = true
+region_rect = Rect2(986.544, 1026.91, 1056.22, 988.943)
+
+[node name="red1" type="Sprite2D" parent="."]
+position = Vector2(896, 360)
+scale = Vector2(0.118171, 0.0855705)
+texture = ExtResource("2_qrf0i")
+region_enabled = true
+region_rect = Rect2(986.544, -62.946, 1083.13, 1062.95)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 583.0
+offset_top = 353.0
+offset_right = 639.0
+offset_bottom = 422.0
+theme_override_font_sizes/font_size = 25
+text = "4x"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 545.0
+offset_top = 111.0
+offset_right = 668.0
+offset_bottom = 223.0
+theme_override_font_sizes/font_size = 50
+text = "Bet:"
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 946.0
+offset_top = -70.0
+offset_right = 1128.0
+offset_bottom = 112.0
+theme_override_font_sizes/font_size = 25
+text = "Capital:"
+vertical_alignment = 1
+
+[node name="bet_label" type="Label" parent="."]
+offset_left = 612.0
+offset_top = 123.0
+offset_right = 967.0
+offset_bottom = 232.0
+theme_override_font_sizes/font_size = 50
+text = "0$"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 574.0
+offset_top = 237.0
+offset_right = 649.0
+offset_bottom = 355.0
+theme_override_font_sizes/font_size = 25
+text = "2x"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 979.0
+offset_top = 141.0
+offset_right = 1095.0
+offset_bottom = 218.0
+
+[node name="minus" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_pjyk1")
+theme_override_font_sizes/font_size = 50
+text = "-"
+
+[node name="plus" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_pjyk1")
+theme_override_font_sizes/font_size = 50
+text = "+"
+
+[node name="capital_label" type="Label" parent="."]
+offset_left = 573.0
+offset_top = 3.0
+offset_right = 1088.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 75
+text = "0$"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_lasko")
+
+[node name="lost" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_8dpri")
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_k13br")
+autoplay = true
+parameters/looping = true
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_25a4r")
+
+[node name="pop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_lhafn")
+
+[node name="broke" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_wx0q0")
+
+[connection signal="pressed" from="Control/VBoxContainer/VBoxContainer/HBoxContainer/black" to="." method="_on_black_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/VBoxContainer/HBoxContainer/red" to="." method="_on_red_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/VBoxContainer/HBoxContainer2/black1" to="." method="_on_black_1_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/VBoxContainer/HBoxContainer2/black2" to="." method="_on_black_2_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/VBoxContainer/HBoxContainer2/red1" to="." method="_on_red_1_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/VBoxContainer/HBoxContainer2/red2" to="." method="_on_red_2_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/spin" to="." method="_on_spin_pressed"]
+[connection signal="pressed" from="HBoxContainer/minus" to="." method="_on_minus_pressed"]
+[connection signal="pressed" from="HBoxContainer/plus" to="." method="_on_plus_pressed"]
