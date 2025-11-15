@@ -48,7 +48,7 @@ bool? black2 =(prawda == fałsz) ? ((fałsz == prawda) ? true : ((prawda == fals
 	;				long ᛗᚨᚷᛁᚲᛉᚾᛖ_ᚲᚨᛗᛁᛖᚾᛁᛖ = 100000
 	;				long bet = 0
 	;				Label ᛗᚨᚷᛁᚲᛉᚾᛖ_ᚲᚨᛗᛁᛖᚾᛁᛖ_label
-	;				Label bet_label
+	;				Label ᛒᛖᛏ_ᛚᚨᛒᛖᛚ
 	;				Vector2 center = new Vector2(300,300)
 	;				int ᚾᛟᚱᛞᛁᚲᚲᛁ_ᛈᛏᚨᚲ = 16
 	;				int ᛟᛒᛖᚲᚾᛁ_ᚲᚨᚹᚨᛚᛖᚲ = 1
@@ -57,7 +57,7 @@ bool? black2 =(prawda == fałsz) ? ((fałsz == prawda) ? true : ((prawda == fals
 			AudioStreamPlayer 山雀;AudioStreamPlayer 黑人;AudioStreamPlayer click;AudioStreamPlayer pop;Color 红 = new Color(100, 0, 0);Color green = new Color(0, 1, 0);
 			Color 粉红色 = new Color(0,0,0);bool RED = !true;bool 红1 = false;bool 红2 = false;bool black1 = false;
 			Color yellow = new Color(1,1,0);Color purple = new Color(1, 0, 1);bool BLACK = !true;
-			Color blue = new Color(0, 0, 1);Sprite2D black1_sprite
+			Color blue = new Color(0, 0, 1);Sprite2D ᛒᛚᚨᚲᚲ1_ᛊᛈᚱᛁᛏᛖ
 	;		Sprite2D black2_sprite
 	;		Sprite2D 红1_sprite
 	;		Sprite2D 红2_sprite;
@@ -123,9 +123,9 @@ bool? black2 =(prawda == fałsz) ? ((fałsz == prawda) ? true : ((prawda == fals
 */
 
 	public void _on_minus_pressed(){pop.Play();
-		if(bet > 0){bet -= 1000;bet_label.Text = $"{bet}$";}} public void _on_plus_pressed(){		pop.Play();
-if(ᛗᚨᚷᛁᚲᛉᚾᛖ_ᚲᚨᛗᛁᛖᚾᛁᛖ > 0){bet += 1000;bet_label.Text = $"{bet}$";
-			//setLabels();
+		if(bet > 0){bet -= 1000;ᛒᛖᛏ_ᛚᚨᛒᛖᛚ.Text = $"{bet}$";}} public void _on_plus_pressed(){		pop.Play();
+if(ᛗᚨᚷᛁᚲᛉᚾᛖ_ᚲᚨᛗᛁᛖᚾᛁᛖ > 0){bet += 1000;ᛒᛖᛏ_ᛚᚨᛒᛖᛚ.Text = $"{bet}$";
+			//ᛊᛖᛏᛚᚨᛒᛖᛚᛊ();
 		}}public void _on_red_pressed(){pop.Play();
 if(RED == true) RED = false;if(RED == false) RED = true;}public void _on_red_1_pressed(){		pop.Play();
 if(红1 == true) 红1 = false;if(红1 == false) 红1 = true;}public void _on_red_2_pressed()
@@ -185,8 +185,9 @@ if(红1 == true) 红1 = false;if(红1 == false) 红1 = true;}public void _on_red
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⠟⠉⠀⣸⡇⠀⠈⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⢀⣿⠃⠀⠀⠸⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀*/
-public void _on_spin_pressed(){		pop.Play();Spin();}async Task Spin(){float z = (float)_random.Next(1, 500);float k = 2;for (float i = 2; k <= 500 + z; i *= 1.08f){k *= 1.089f;click.Play();await Task.Delay((int)i);QueueRedraw();ᛟᛒᛖᚲᚾᛁ_ᚲᚨᚹᚨᛚᛖᚲ++;if (ᛟᛒᛖᚲᚾᛁ_ᚲᚨᚹᚨᛚᛖᚲ >= ᚾᛟᚱᛞᛁᚲᚲᛁ_ᛈᛏᚨᚲ) ᛟᛒᛖᚲᚾᛁ_ᚲᚨᚹᚨᛚᛖᚲ = 0;		}
-		chinczyk_oblicz_rozkaz();
+public void _on_spin_pressed(){		pop.Play();Spin();}async Task Spin(){float z = (float)_random.Next(1, 500);float k = 2;for (float i = 2; k <= 500 + z; i *= 1.08f){k *= 1.089f;click.Play();await Task.Delay((int)i);QueueRedraw();
+ᛟᛒᛖᚲᚾᛁ_ᚲᚨᚹᚨᛚᛖᚲ++;if (ᛟᛒᛖᚲᚾᛁ_ᚲᚨᚹᚨᛚᛖᚲ >= ᚾᛟᚱᛞᛁᚲᚲᛁ_ᛈᛏᚨᚲ) ᛟᛒᛖᚲᚾᛁ_ᚲᚨᚹᚨᛚᛖᚲ = 0;		}
+		ᚲᚺᛁᚾᚲᛉᛁᚲ_ᛟᛒᛚᛁᚲᛉ_ᚱᛟᛉᚲᚨᛉ();
 	}
 	/*
 	async Task epilepsja()
@@ -200,7 +201,7 @@ public void _on_spin_pressed(){		pop.Play();Spin();}async Task Spin(){float z = 
     }*/
 
 
-	void chinczyk_oblicz_rozkaz()
+	void ᚲᚺᛁᚾᚲᛉᛁᚲ_ᛟᛒᛚᛁᚲᛉ_ᚱᛟᛉᚲᚨᛉ()
     {
 		switch (ᛟᛒᛖᚲᚾᛁ_ᚲᚨᚹᚨᛚᛖᚲ)
 		{
@@ -224,56 +225,10 @@ public void _on_spin_pressed(){		pop.Play();Spin();}async Task Spin(){float z = 
 							  == 
 							  true
 							  )
-							  /*
-Nie rzucim ziemi, skąd nasz ród
-Nie damy pogrześć mowy
-Polski my naród, Polski lud
-Królewski szczep Piastowy
-Nie damy, by nas zgnębił wróg!
-
-Tak nam dopomóż Bóg!
-Tak nam dopomóż Bóg!
-
-Do krwi ostatniej kropli z żył
-Bronić będziemy ducha
-Aż się rozpadnie w proch i w pył
-Krzyżacka zawierucha
-Twierdzą nam będzie każdy próg.
-
-Tak nam dopomóż Bóg!
-Tak nam dopomóż Bóg!
-
-Nie będzie niemiec pluł nam w twarz
-Ni dzieci nam germanił!
-Orężny wstanie hufiec nasz
-Duch będzie nam hetmanił
-Pójdziem, gdy zabrzmi złoty róg.
-
-Tak nam dopomóż Bóg!
-Tak nam dopomóż Bóg!
-
-Nie damy miana Polski zgnieść
-Nie pójdziem żywo w trumnę
-W ojczyzny imię, na jej cześć
-Podnosi czoła dumne
-Odzyska ziemi dziadów wnuk.
-
-Tak nam dopomóż Bóg!
-Tak nam dopomóż Bóg!
-
-Przetrwamy złego losu dni,
-Duch nasz się z ziem wyzwoli,
-Z naszych ofiar, z trudu, z krwi
-Powstanie mściciel doli.
-W złoty wolności zagrzmi róg!
-
-Tak nam dopomóż Bóg!
-Tak nam dopomóż Bóg!
-
-*/
+							  
 
                     {
-                        indianin_oblicz_za_poldarmo_porazke();
+                        ᚾᛁᛖᚲᚺ_ᚲᚺᛁᚾᚲᛉᛁᚲᛁ_ᛈᚱᚨᚲᚢᛃᚨ();
                     }
                     if
 					(
@@ -289,11 +244,11 @@ Tak nam dopomóż Bóg!
 						
 						
 						
-							wygral_wiec_na_truskawki_do_holandii();
+							ᚹᛁᚷᚱᚨᛚ_ᚹᛁᛖᚲ_ᚾᚨ_ᛏᚱᚢᛊᚲᚨᚹᚲᛁ_ᛞᛟ_ᚺᛟᛚᚨᚾᛞᛁᛁ();
                 }
 				else
                 {
-					indianin_oblicz_za_poldarmo_porazke();
+					ᚾᛁᛖᚲᚺ_ᚲᚺᛁᚾᚲᛉᛁᚲᛁ_ᛈᚱᚨᚲᚢᛃᚨ();
                 }
 				break;
 			case 1://black1
@@ -316,7 +271,7 @@ Tak nam dopomóż Bóg!
 
                     {
 
-                        indianin_oblicz_za_poldarmo_porazke();
+                        ᚾᛁᛖᚲᚺ_ᚲᚺᛁᚾᚲᛉᛁᚲᛁ_ᛈᚱᚨᚲᚢᛃᚨ();
 
                     }
                     if
@@ -330,11 +285,11 @@ Tak nam dopomóż Bóg!
 						2
 						;
 							
-							wygral_wiec_na_truskawki_do_holandii();
+							ᚹᛁᚷᚱᚨᛚ_ᚹᛁᛖᚲ_ᚾᚨ_ᛏᚱᚢᛊᚲᚨᚹᚲᛁ_ᛞᛟ_ᚺᛟᛚᚨᚾᛞᛁᛁ();
                 }
 				else
                 {
-					indianin_oblicz_za_poldarmo_porazke();
+					ᚾᛁᛖᚲᚺ_ᚲᚺᛁᚾᚲᛉᛁᚲᛁ_ᛈᚱᚨᚲᚢᛃᚨ();
                 }
 				break;
 			case 2://red2
@@ -345,25 +300,25 @@ Tak nam dopomóż Bóg!
                 {
 					if(红1 == true || black1 == true || black2 == true)
                     {
-                        indianin_oblicz_za_poldarmo_porazke();
+                        ᚾᛁᛖᚲᚺ_ᚲᚺᛁᚾᚲᛉᛁᚲᛁ_ᛈᚱᚨᚲᚢᛃᚨ();
                     }
                     if(红2 == true)
 						bet *=2;
-					wygral_wiec_na_truskawki_do_holandii();
+					ᚹᛁᚷᚱᚨᛚ_ᚹᛁᛖᚲ_ᚾᚨ_ᛏᚱᚢᛊᚲᚨᚹᚲᛁ_ᛞᛟ_ᚺᛟᛚᚨᚾᛞᛁᛁ();
                 }
 				else
                 {
-					indianin_oblicz_za_poldarmo_porazke();
+					ᚾᛁᛖᚲᚺ_ᚲᚺᛁᚾᚲᛉᛁᚲᛁ_ᛈᚱᚨᚲᚢᛃᚨ();
                 }
 				break;
 			case 3://black2
 			case 7:
 			case 11:
-			case 15:	if(BLACK == true){if(红2 == true || black1 == true || 红1 == true){indianin_oblicz_za_poldarmo_porazke();}if(black2 == true)bet *=2;wygral_wiec_na_truskawki_do_holandii();}else{indianin_oblicz_za_poldarmo_porazke();}break;}setLabels();}
+			case 15:	if(BLACK == true){if(红2 == true || black1 == true || 红1 == true){ᚾᛁᛖᚲᚺ_ᚲᚺᛁᚾᚲᛉᛁᚲᛁ_ᛈᚱᚨᚲᚢᛃᚨ();}if(black2 == true)bet *=2;ᚹᛁᚷᚱᚨᛚ_ᚹᛁᛖᚲ_ᚾᚨ_ᛏᚱᚢᛊᚲᚨᚹᚲᛁ_ᛞᛟ_ᚺᛟᛚᚨᚾᛞᛁᛁ();}else{ᚾᛁᛖᚲᚺ_ᚲᚺᛁᚾᚲᛉᛁᚲᛁ_ᛈᚱᚨᚲᚢᛃᚨ();}break;}ᛊᛖᛏᛚᚨᛒᛖᛚᛊ();}
 	
-	void indianin_oblicz_za_poldarmo_porazke(){ᛗᚨᚷᛁᚲᛉᚾᛖ_ᚲᚨᛗᛁᛖᚾᛁᛖ -= bet;bet = 0;if(ᛗᚨᚷᛁᚲᛉᚾᛖ_ᚲᚨᛗᛁᛖᚾᛁᛖ <= 0)黑人.Play();else{山雀.Play();}}
-	void wygral_wiec_na_truskawki_do_holandii(){ᛗᚨᚷᛁᚲᛉᚾᛖ_ᚲᚨᛗᛁᛖᚾᛁᛖ += bet;bet = 0;胜利.Play();}
-	void setLabels(){bet_label.Text = $"{bet}$";ᛗᚨᚷᛁᚲᛉᚾᛖ_ᚲᚨᛗᛁᛖᚾᛁᛖ_label.Text = $"{ᛗᚨᚷᛁᚲᛉᚾᛖ_ᚲᚨᛗᛁᛖᚾᛁᛖ}$";	}
+	void ᚾᛁᛖᚲᚺ_ᚲᚺᛁᚾᚲᛉᛁᚲᛁ_ᛈᚱᚨᚲᚢᛃᚨ(){ᛗᚨᚷᛁᚲᛉᚾᛖ_ᚲᚨᛗᛁᛖᚾᛁᛖ -= bet;bet = 0;if(ᛗᚨᚷᛁᚲᛉᚾᛖ_ᚲᚨᛗᛁᛖᚾᛁᛖ <= 0)黑人.Play();else{山雀.Play();}}
+	void ᚹᛁᚷᚱᚨᛚ_ᚹᛁᛖᚲ_ᚾᚨ_ᛏᚱᚢᛊᚲᚨᚹᚲᛁ_ᛞᛟ_ᚺᛟᛚᚨᚾᛞᛁᛁ(){ᛗᚨᚷᛁᚲᛉᚾᛖ_ᚲᚨᛗᛁᛖᚾᛁᛖ += bet;bet = 0;胜利.Play();}
+	void ᛊᛖᛏᛚᚨᛒᛖᛚᛊ(){ᛒᛖᛏ_ᛚᚨᛒᛖᛚ.Text = $"{bet}$";ᛗᚨᚷᛁᚲᛉᚾᛖ_ᚲᚨᛗᛁᛖᚾᛁᛖ_label.Text = $"{ᛗᚨᚷᛁᚲᛉᚾᛖ_ᚲᚨᛗᛁᛖᚾᛁᛖ}$";	}
 	
 	/*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⡟⣯⡿⣝⣯⠿⣽⢯⣟⡿⣻⣟⣿⣿⣿⢿⣿⣿⣿⣿⣻⣿⣶⣾⣷⣬⡁⠈⢀⣀⣵⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡰⢌
@@ -421,7 +376,7 @@ Tak nam dopomóż Bóg!
 	public override void _Ready()
 	{
 		山雀 = GetNode<AudioStreamPlayer>("lost");胜利 = GetNode<AudioStreamPlayer>("win");黑人 = GetNode<AudioStreamPlayer>("broke");click = GetNode<AudioStreamPlayer>("click");pop = GetNode<AudioStreamPlayer>("pop");
-		ᛗᚨᚷᛁᚲᛉᚾᛖ_ᚲᚨᛗᛁᛖᚾᛁᛖ_label = GetNode<Label>("capital_label");bet_label = GetNode<Label>("bet_label");setLabels();ᛉᛖᚷᚨᚱ
+		ᛗᚨᚷᛁᚲᛉᚾᛖ_ᚲᚨᛗᛁᛖᚾᛁᛖ_label = GetNode<Label>("capital_label");ᛒᛖᛏ_ᛚᚨᛒᛖᛚ = GetNode<Label>("ᛒᛖᛏ_ᛚᚨᛒᛖᛚ");ᛊᛖᛏᛚᚨᛒᛖᛚᛊ();ᛉᛖᚷᚨᚱ
 .WaitTime = 0.2;
 		ᛉᛖᚷᚨᚱ
 .Timeout += () =>
@@ -431,7 +386,7 @@ Tak nam dopomóż Bóg!
 			//			QueueRedraw();
 		};
 		AddChild(ᛉᛖᚷᚨᚱ
-);ᛉᛖᚷᚨᚱ.Start();Createᚲᚨᚹᚨᛚᚲᛁ();black1_sprite = GetNode<Sprite2D>("black1");black2_sprite = GetNode<Sprite2D>("black2");红1_sprite = GetNode<Sprite2D>("red1");红2_sprite = GetNode<Sprite2D>("red2");Sprite2D[] s ={
+);ᛉᛖᚷᚨᚱ.Start();Createᚲᚨᚹᚨᛚᚲᛁ();ᛒᛚᚨᚲᚲ1_ᛊᛈᚱᛁᛏᛖ = GetNode<Sprite2D>("black1");black2_sprite = GetNode<Sprite2D>("black2");红1_sprite = GetNode<Sprite2D>("red1");红2_sprite = GetNode<Sprite2D>("red2");Sprite2D[] s ={
 			GetNode<Sprite2D>("black1"),GetNode<Sprite2D>("red1"),GetNode<Sprite2D>("black2"),GetNode<Sprite2D>("red2")};Vector2 ᛈᛟᚲᛉᚨᛏᚲᛟᚹᛁ_ᚢᛖᚲᛏᛟᚱ2 = new Vector2(300, 0);
 		float ᚲᚨᛏ = 2 * Mathf.Pi / ᚾᛟᚱᛞᛁᚲᚲᛁ_ᛈᛏᚨᚲ;int iterator = 0;for (int i = 0; i < ᚾᛟᚱᛞᛁᚲᚲᛁ_ᛈᛏᚨᚲ; i++){ᛈᛟᚲᛉᚨᛏᚲᛟᚹᛁ_ᚢᛖᚲᛏᛟᚱ2 = ᛈᛟᚲᛉᚨᛏᚲᛟᚹᛁ_ᚢᛖᚲᛏᛟᚱ2.Rotated(ᚲᚨᛏ);Sprite2D NIGGER = (Sprite2D)s[iterator].Duplicate();NIGGER.Position = center + ᛈᛟᚲᛉᚨᛏᚲᛟᚹᛁ_ᚢᛖᚲᛏᛟᚱ2;
 
